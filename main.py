@@ -2,6 +2,7 @@ import random
 
 
 class Player:
+    """Player, who plays game UNO"""
     def __init__(self):
         self.__cards = []
 
@@ -12,6 +13,7 @@ class Player:
         return self.__cards
 
 
+''' List of cards '''
 Cards = [["red", "0"], ["red", "1"], ["red", "1"], ["red", "2"], ["red", "2"], ["red", "3"], ["red", "3"], ["red", "4"],
          ["red", "4"], ["red", "5"], ["red", "5"], ["red", "6"], ["red", "6"], ["red", "7"], ["red", "7"], ["red", "8"],
          ["red", "8"], ["red", "9"], ["red", "9"],
@@ -38,8 +40,8 @@ Cards = [["red", "0"], ["red", "1"], ["red", "1"], ["red", "2"], ["red", "2"], [
 
 random.shuffle(Cards)
 
-number_of_players = 4
-number_of_cards = 7
+number_of_players = 4  # The number of player in a game
+number_of_cards = 7  # The number of cards in each player
 players = [Player() for i in range(number_of_players)]
 k = 0
 for i in range(0, number_of_players * number_of_cards, number_of_players):
